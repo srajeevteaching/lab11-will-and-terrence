@@ -122,8 +122,18 @@ def binary_search_iterative(sorted_list, value):
 def binary_search_recursive(sorted_list, value, start, end):
 
     # TODO: Implement this function using recursion
-
-    return -1
+    mid = (start + end)//2
+    if sorted_list[mid] == value:
+        # found the value: return the index
+        return mid
+    elif value < sorted_list[mid]:
+        # search in first half (discard second half)
+        end = mid - 1
+        binary_search_recursive(sorted_list, value, start, end)
+    else:
+        # search in second half (discard first half)
+        start = mid + 1
+        binary_search_recursive(sorted_list, value, start, end)
 
 
 # ------------------------------------------------------------------------------
