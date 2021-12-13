@@ -28,7 +28,7 @@ import time
 SEARCH_SIZE = 1000000
 
 
-# ------------------------------------------------------------------------------
+# -----------------------------------------------------------------------------
 # Purpose: Finds numbers in the Fibonacci sequence using iteration
 # Parameters: n - element of the Fibonacci sequence to find
 # Returns: The nth element of the Fibonacci sequence
